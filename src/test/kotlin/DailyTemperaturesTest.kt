@@ -6,24 +6,12 @@ object DailyTemperaturesTest {
     fun dailyTemperatures(temperatures: IntArray): IntArray {
         val stack = ArrayDeque<Int>()
         val result = IntArray(temperatures.size) { 0 }
-        var i = temperatures.size - 1
-        for (t in temperatures.reversed()) {
-            var counter = 0
-            while (!stack.isEmpty()) {
-                val last = stack.last()
-                if (last < t && stack.size == 1) {
-                    result[i] = 0
-                    stack.removeLast()
-                } else if (last > t) {
-                    result[i] = counter
-                    break
-                } else {
-                    counter++
-                    stack.removeLast()
-                }
+        for ((i, v) in temperatures.withIndex()) {
+            while (stack.isNotEmpty() && v > temperatures[stack.last()]) {
+                val idx = stack.removeLast()
+                result[idx] = i - idx
             }
-            i--
-            stack.addLast(t)
+            stack.addLast(i)
         }
         return result
     }
