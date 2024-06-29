@@ -23,7 +23,7 @@ object OverlappingIntervalsTest {
     }
 
     @Test
-    fun testOverlappingIntervals(){
+    fun testOverlappingIntervals() {
         val sample1 = arrayOf(
             intArrayOf(1, 100),
             intArrayOf(11, 22),

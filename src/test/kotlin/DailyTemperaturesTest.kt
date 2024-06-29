@@ -34,8 +34,8 @@ object DailyTemperaturesTest {
         val result1 = dailyTemperatures(test1)
         assertContentEquals(intArrayOf(1, 1, 0), result1)
 
-        val test2 = intArrayOf(73,74,75,71,69,72,76,73)
+        val test2 = intArrayOf(73, 74, 75, 71, 69, 72, 76, 73)
         val result2 = dailyTemperatures(test2)
-        assertContentEquals(intArrayOf(1,1,4,2,1,1,0,0), result2)
+        assertContentEquals(intArrayOf(1, 1, 4, 2, 1, 1, 0, 0), result2)
     }
 }

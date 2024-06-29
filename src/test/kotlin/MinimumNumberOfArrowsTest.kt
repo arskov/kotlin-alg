@@ -30,19 +30,19 @@ object MinimumNumberOfArrowsTest {
     @Test
     fun testMinimumNumberOfArrows() {
         val test1 = arrayOf(
-            intArrayOf(10,16),
-            intArrayOf(2,8),
-            intArrayOf(1,6),
-            intArrayOf(7,12),
+            intArrayOf(10, 16),
+            intArrayOf(2, 8),
+            intArrayOf(1, 6),
+            intArrayOf(7, 12),
         )
         val res1 = findMinArrowShots(test1)
         assertEquals(2, res1)
 
         val test2 = arrayOf(
-            intArrayOf(1,2),
-            intArrayOf(3,4),
-            intArrayOf(5,6),
-            intArrayOf(7,8),
+            intArrayOf(1, 2),
+            intArrayOf(3, 4),
+            intArrayOf(5, 6),
+            intArrayOf(7, 8),
         )
         val res2 = findMinArrowShots(test2)
         assertEquals(4, res2)
