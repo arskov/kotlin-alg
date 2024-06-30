@@ -1,7 +1,7 @@
 import kotlin.test.Test
 import kotlin.test.assertContentEquals
 
-class StockSpannerTest {
+object StockSpannerTest {
     class StockSpanner() {
 
         private val stack = ArrayDeque<Pair<Int, Int>>()
