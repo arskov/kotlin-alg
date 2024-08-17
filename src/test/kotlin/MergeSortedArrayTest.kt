@@ -27,5 +27,19 @@ object MergeSortedArrayTest {
         var numsSize2 = 3
         merge(nums1, numsSize1, nums2, numsSize2)
         assertContentEquals(intArrayOf(1, 2, 2, 3, 5, 6), nums1)
+
+        nums1 = intArrayOf(1)
+        numsSize1 = 1
+        nums2 = intArrayOf()
+        numsSize2 = 0
+        merge(nums1, numsSize1, nums2, numsSize2)
+        assertContentEquals(intArrayOf(1), nums1)
+
+        nums1 = intArrayOf(1, 0)
+        numsSize1 = 1
+        nums2 = intArrayOf(0)
+        numsSize2 = 1
+        merge(nums1, numsSize1, nums2, numsSize2)
+        assertContentEquals(intArrayOf(0, 1), nums1)
     }
 }
