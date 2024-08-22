@@ -3,18 +3,12 @@ import kotlin.test.assertContentEquals
 
 object RemoveDuplicatesIITest {
     fun removeDuplicates(nums: IntArray): Int {
-        if (nums.isEmpty()) return 0
-        var i = 1
-        var dup = 0
-        for (j in 1 until nums.size) {
-            if ((nums[j] != nums[j - 1]) || (nums[j] == nums[j - 1] && dup == 0)) {
-                if (nums[j] == nums[j - 1]) {
-                    dup = 1
-                } else {
-                    dup = 0
-                }
+        if (nums.size <= 2) return nums.size
+        var i = 2
+        for (j in 2 until nums.size) {
+            if (nums[j] != nums[i-2]) {
                 nums[i] = nums[j]
-                i += 1
+                i++
             }
         }
         return i
