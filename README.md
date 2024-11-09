@@ -4,8 +4,11 @@ The repository is dedicated to providing solutions for a wide array of coding ch
 
 1. [Merge Sorted Array](src/test/kotlin/MergeSortedArrayTest.kt)
 1. [Remove Element From Array](src/test/kotlin/RemoveElementTest.kt)
-1. [Remove Duplicates From Sorted Array](src/test/kotlin/RemoveDuplicatesTest.kt)
+1. [Remove Duplicates From Sorted Array 1](src/test/kotlin/RemoveDuplicatesTest.kt)
+1. [Remove Duplicates From Sorted Array 2](src/test/kotlin/RemoveDuplicatesIITest.kt)
 1. [Overlapping Intervals](src/test/kotlin/OverlappingIntervalsTest.kt)
 1. [Minimum Number of Arrows](src/test/kotlin/MinimumNumberOfArrowsTest.kt)
 1. [Daily Temperatures](src/test/kotlin/DailyTemperaturesTest.kt)
 1. [Stock Spanner](src/test/kotlin/StockSpannerTest.kt)
+1. [Majority Element](src/test/kotlin/MajorityElementTest.kt)
+1. [Buy and Sell Stocks II](src/test/kotlin/BuyAndSellStocks2.kt)
