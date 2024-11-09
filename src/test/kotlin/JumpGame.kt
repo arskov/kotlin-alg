@@ -41,14 +41,33 @@ object JumpGame {
             }
             return canJumpInternal(nums, 0)
         }
+
+        fun canJumpBottomUp(nums: IntArray): Boolean {
+            val n = nums.size
+            val dp = BooleanArray(n)
+            dp[0] = true
+            for (i in 0 until n) {
+                if (dp[i]) {
+                    val maxFurther = minOf(i + nums[i], n - 1)
+                    for (j in i..maxFurther) dp[j] = true
+                }
+                if (dp[n - 1]) return true
+            }
+            return dp[n - 1]
+        }
     }
 
     @Test
     fun testCanJumpBacktracking() {
         val solution = Solution()
+
         assertEquals(true, solution.canJumpBacktracking(intArrayOf(2, 3, 1, 1, 4)))
         assertEquals(false, solution.canJumpBacktracking(intArrayOf(3, 2, 1, 0, 4)))
+
         assertEquals(true, solution.canJumpBacktrackingMemo(intArrayOf(2, 3, 1, 1, 4)))
         assertEquals(false, solution.canJumpBacktrackingMemo(intArrayOf(3, 2, 1, 0, 4)))
+
+        assertEquals(true, solution.canJumpBottomUp(intArrayOf(2, 3, 1, 1, 4)))
+        assertEquals(false, solution.canJumpBottomUp(intArrayOf(3, 2, 1, 0, 4)))
     }
 }
