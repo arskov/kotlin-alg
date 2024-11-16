@@ -55,6 +55,17 @@ object JumpGame {
             }
             return dp[n - 1]
         }
+
+        fun canJumpGreedy(nums: IntArray): Boolean {
+            val n = nums.size
+            var farthest = 0
+            for (i in 0..<n) {
+                if (i > farthest) return false
+                farthest = maxOf(farthest, i + nums[i])
+                if (i >= n - 1) return true
+            }
+            return false
+        }
     }
 
     @Test
@@ -69,5 +80,8 @@ object JumpGame {
 
         assertEquals(true, solution.canJumpBottomUp(intArrayOf(2, 3, 1, 1, 4)))
         assertEquals(false, solution.canJumpBottomUp(intArrayOf(3, 2, 1, 0, 4)))
+
+        assertEquals(true, solution.canJumpGreedy(intArrayOf(2, 3, 1, 1, 4)))
+        assertEquals(false, solution.canJumpGreedy(intArrayOf(3, 2, 1, 0, 4)))
     }
 }
