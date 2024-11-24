@@ -29,6 +29,22 @@ object JumpGame2 {
 
       return dp(0) // Start from the first index
     }
+
+    fun jumpGreedy(nums: IntArray): Int {
+      val s = nums.size
+      if (s <= 1) return 0
+      var curFar = 0
+      var curEnd = 0
+      var jump = 0
+      for (i in 0 until s - 1) {
+        curFar = maxOf(curFar, i + nums[i])
+        if (i == curEnd) {
+          jump += 1
+          curEnd = curFar
+        }
+      }
+      return jump
+    }
   }
 
   @Test
@@ -37,5 +53,9 @@ object JumpGame2 {
     assertEquals(2, solution.jumpDpMemo(intArrayOf(2, 3, 1, 1, 4)))
     assertEquals(2, solution.jumpDpMemo(intArrayOf(2, 3, 0, 1, 4)))
     assertEquals(Int.MAX_VALUE, solution.jumpDpMemo(intArrayOf(3, 2, 1, 0, 4)))
+    assertEquals(2, solution.jumpGreedy(intArrayOf(2, 3, 1, 1, 4)))
+    assertEquals(2, solution.jumpGreedy(intArrayOf(2, 3, 0, 1, 4)))
+    // Greedy approach doesn't work in case if the array contains unreachable last step
+    // assertEquals(Int.MAX_VALUE, solution.jumpGreedy(intArrayOf(3, 2, 1, 0, 4)))
   }
 }
