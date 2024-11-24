@@ -1,6 +1,9 @@
 # Coding Challenges and Solutions (Kotlin)
 
-The repository is dedicated to providing solutions for a wide array of coding challenges and problems, similar to those found on platforms like LeetCode, HackerRank, and others. This repository is an invaluable resource for anyone looking to enhance their coding skills, prepare for technical interviews, or simply engage in the art of problem-solving using programming.
+The repository is dedicated to providing solutions for a wide array of coding challenges and problems, similar to those
+found on platforms like LeetCode, HackerRank, and others. This repository is an invaluable resource for anyone looking
+to enhance their coding skills, prepare for technical interviews, or simply engage in the art of problem-solving using
+programming.
 
 1. [Merge Sorted Array](src/test/kotlin/MergeSortedArrayTest.kt)
 1. [Remove Element From Array](src/test/kotlin/RemoveElementTest.kt)
@@ -14,3 +17,4 @@ The repository is dedicated to providing solutions for a wide array of coding ch
 1. [Buy and Sell Stocks II](src/test/kotlin/BuyAndSellStocks2.kt)
 1. [Jump Game](src/test/kotlin/JumpGame.kt)
 1. [Jump Game 2](src/test/kotlin/JumpGame2.kt)
+1. [H-Index](src/test/kotlin/HIndex.kt)
