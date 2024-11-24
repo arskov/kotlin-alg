@@ -13,3 +13,4 @@ The repository is dedicated to providing solutions for a wide array of coding ch
 1. [Majority Element](src/test/kotlin/MajorityElementTest.kt)
 1. [Buy and Sell Stocks II](src/test/kotlin/BuyAndSellStocks2.kt)
 1. [Jump Game](src/test/kotlin/JumpGame.kt)
+1. [Jump Game 2](src/test/kotlin/JumpGame2.kt)
