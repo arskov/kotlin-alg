@@ -3,18 +3,12 @@ import kotlin.test.assertContentEquals
 
 object RemoveElementTest {
     fun removeElement(nums: IntArray, `val`: Int): Int {
-        var i = 0
+        if (nums.isEmpty()) return 0
         var j = 0
-        while (j < nums.size) {
-            if (nums[j] != `val`) {
-                val tmp = nums[i]
-                nums[i] = nums[j]
-                nums[j] = tmp
-                i++
-            }
-            j++
+        for (v in nums) {
+            if (v != `val`) nums[j++] = v
         }
-        return i
+        return j
     }
 
     @Test
