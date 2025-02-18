@@ -1,3 +1,12 @@
+import kotlin.test.Test
+import kotlin.test.assertEquals
+
+fun String.chash(): Long {
+    return this.fold(0L) { acc, ch -> acc + ch.code }
+}
+
+object FindFirstOccurenceInString {
+
 class Solution {
     fun strStr(haystack: String, needle: String): Int {
         val hsz = haystack.length
@@ -17,6 +26,11 @@ class Solution {
     }
 }
 
-fun String.chash(): Long {
-    return this.fold(0L) { acc, ch -> acc + ch.code }
+@Test
+fun testFirstOccurenceInString {
+    val solution = Solution()
+    assertEquals(-1, solution.strStr("leetcode", "letco")
+    assertEquals(3, solution.strStr("leetcode", "tc")
+}
+
 }
